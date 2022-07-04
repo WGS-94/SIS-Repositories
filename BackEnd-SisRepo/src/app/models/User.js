@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import authConfig from '../../config/auth';
+//import bcrypt from 'bcryptjs';
+//import jwt from 'jsonwebtoken';
+//import authConfig from '../../config/auth';
 
 const UserSchema = new mongoose.Schema({
   name : {
@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
     required: true
   },
   email: {
-    type:String,
+    type: String,
     required: true,
     unique: true,
     lowercase: true
@@ -22,6 +22,7 @@ const UserSchema = new mongoose.Schema({
   timestamps: true
 }); 
 
+/*
 UserSchema.pre('save', async function(next) {
   if(! this.isModified('password')){
     return next()
@@ -45,6 +46,6 @@ UserSchema.statics = {
       expiresIn: authConfig.expiresIn
     })
   }
-}
+}*/
 
 export default mongoose.model('User', UserSchema);
