@@ -2,9 +2,7 @@ import { Router } from "express";
 
 import UserController from './app/controllers/Usercontroller';
 import SessionControler from './app/controllers/SessionControllers';
-
 import RepoConctroller from './app/controllers/RepoController';
-import DashboardController from './app/controllers/DashboardControllers';
 
 const AuthMiddleware = require('./app/middlewares/auth');
 
@@ -16,11 +14,10 @@ routes.get('/users', UserController.index);
 routes.get('/users/:id', UserController.show);
 routes.get('/users/:id', UserController.update);
 
-
 routes.use(AuthMiddleware);
 
 routes.get('/users/:user_id/repositories', RepoConctroller.index);
-
-routes.get('/dashboard', DashboardController.show);
+routes.post('/users/:user_id/repositories', RepoConctroller.create);
+routes.delete('/users/:user_id/repositories', RepoConctroller.destroy);
 
 export default routes;
