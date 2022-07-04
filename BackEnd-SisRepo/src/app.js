@@ -1,0 +1,42 @@
+require('dotenv').config()
+import express  from "express";
+import path from "path";
+import cors from 'cors';
+import routes from "./routes";
+import serv from 'http';
+import io from 'socket.io';
+
+require('./database')
+
+const corsOptions = {
+  origin:'*',
+  credentials:true,     //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
+
+class App {
+  constructor() {
+    this.app = express();
+    
+    this.server = serv.Server(this.app)
+    this.io = io(this.server)
+    this.middlewares();
+    this.routes();
+  }
+
+  middlewares() {
+    this.app.use(cors(corsOptions))
+    this.app.use(express.json())
+    this.app.use((req, res, next) => {
+      req.io = this.io
+      return next()
+    })
+  }
+
+  routes() {
+    this.app.use(routes);
+  }
+
+}
+
+export default new App().server;
