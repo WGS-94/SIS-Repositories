@@ -80,4 +80,4 @@ class RepoController {
   }
 }
 
-export default new RepoController();
+export default RepoController();

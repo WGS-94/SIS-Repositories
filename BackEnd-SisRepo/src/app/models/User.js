@@ -48,5 +48,4 @@ UserSchema.statics = {
   }
 }
 
-export default new mongoose.model('User', UserSchema);
-//module.exports = new mongoose.model('User', UserSchema);
+export default mongoose.model('User', UserSchema);
