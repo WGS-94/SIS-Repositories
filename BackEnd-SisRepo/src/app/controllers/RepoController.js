@@ -30,14 +30,16 @@ class RepoController {
       name: yup.string().required()
     })
     
-    if (!(await Schema.isValid(req.body))){
-      return res.status(400).json({error: 'validation fails'})
-    }
+    
     
     try {
 
       const { user_id } = req.params;
       const { name, url } = req.body;
+
+      if (!(await Schema.isValid(req.body))){
+        return res.status(400).json({error: 'validation fails'})
+      }
 
       const user = await User.findById({ user_id });
 
@@ -80,4 +82,4 @@ class RepoController {
   }
 }
 
-export default RepoController();
+export default new RepoController();

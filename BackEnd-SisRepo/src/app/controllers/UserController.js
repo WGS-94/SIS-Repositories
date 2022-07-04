@@ -14,7 +14,7 @@ class UsersController {
     }
   }
 
-  /*async show(req, res) {
+  async show(req, res) {
     try {
       const { user_id } = req.params;
       const user = await User.findOne({ user_id });
@@ -28,7 +28,7 @@ class UsersController {
       console.error(err);
       return res.status(500).json({ error: "Internal Server Error" });
     }
-  }*/
+  }
 
   async store(req, res) {
 
@@ -37,6 +37,7 @@ class UsersController {
       email: yup.string().required(),
       password: yup.string().required().min(6),
     })
+    
     
     if (!(await Schema.isValid(req.body))){
       return res.status(400).json({error: 'validation fails'})
@@ -91,4 +92,4 @@ class UsersController {
   }
 }
 
-export default UsersController();
+export default new UsersController();
