@@ -3,24 +3,23 @@ import { Router } from "express";
 import UserController from './app/controllers/Usercontroller';
 import SessionControler from './app/controllers/SessionControllers';
 
-import MachineControler from './app/controllers/MachineControllers';
+import RepoConctroller from './app/controllers/RepoController';
 import DashboardController from './app/controllers/DashboardControllers';
 
 const AuthMiddleware = require('./app/middlewares/auth');
 
 const routes = new Router();
 
+routes.post('/sessions', SessionControler.store);
 routes.post('/users', UserController.create);
 routes.get('/users', UserController.index);
-routes.post('/sessions', SessionControler.store);
+routes.get('/users/:id', UserController.show);
+routes.get('/users/:id', UserController.update);
+
 
 routes.use(AuthMiddleware);
 
-routes.get('/machines', MachineControler.index);
-routes.put('/machines/:machine_id', upload.single('thumbnail'), MachineControler.update);
-routes.delete('/machines/:machine_id', MachineControler.destroy);
-routes.get('/machines/user/:user_id', MachineControler.getMachinesByUser);
-routes.get('/machines/:machine_id', MachineControler.getMachineByID);
+routes.get('/users/:user_id/repositories', RepoConctroller.index);
 
 routes.get('/dashboard', DashboardController.show);
 

@@ -2,6 +2,7 @@ import User from "../models/User";
 import yup from 'yup';
 
 class UsersController {
+  
   async index(req, res) {
     try {
       const users = await User.find();
