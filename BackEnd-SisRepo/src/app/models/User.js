@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const authConfig = require('../../config/auth');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import authConfig from '../../config/auth';
 
 const UserSchema = new mongoose.Schema({
   name : {
@@ -47,5 +47,4 @@ UserSchema.statics = {
   }
 }
 
-//export default model('User', UserSchema);
-module.exports = new mongoose.model('User', UserSchema);
+export default mongoose.model('User', UserSchema);

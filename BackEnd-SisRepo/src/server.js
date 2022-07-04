@@ -1,5 +1,7 @@
-import App from './app';
+import app from './app';
 
-App.listen(5000, () => {
+require("dotenv/config");
+
+app.listen(process.env.PORT, () => {
   console.log('Is Running....')
 })

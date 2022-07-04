@@ -29,6 +29,11 @@ class App {
     this.app.use(express.json())
     this.app.use((req, res, next) => {
       req.io = this.io
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
       return next()
     })
   }
