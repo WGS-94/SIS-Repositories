@@ -14,6 +14,8 @@ class Database {
       useFindAndModify: false,
       useUnifiedTopology: true,
       useCreateIndex: true
+    }, () => {
+      console.log('connected to DB...')
     })
   }
 }
