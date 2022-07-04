@@ -2,6 +2,6 @@ import app from './app';
 
 require("dotenv/config");
 
-app.listen(process.env.PORT, () => {
+app.listen(3333, () => {
   console.log('Is Running....')
 })

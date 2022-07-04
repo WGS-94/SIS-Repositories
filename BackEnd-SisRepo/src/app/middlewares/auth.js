@@ -1,7 +1,7 @@
 
-const jwt = require('jsonwebtoken')
-const {promisify} = require('util')
-const authConfig = require('../../config/auth')
+const jwt = require('jsonwebtoken');
+const {promisify} = require('util');
+const authConfig = require('../../config/auth');
 
 module.exports = async (req, res , next) => {
 

@@ -14,10 +14,10 @@ class UsersController {
     }
   }
 
-  async show(req, res) {
+  /*async show(req, res) {
     try {
-      const { email } = req.params;
-      const user = await User.findOne({ email });
+      const { user_id } = req.params;
+      const user = await User.findOne({ user_id });
 
       if (!user) {
         return res.status(404).json();
@@ -28,11 +28,11 @@ class UsersController {
       console.error(err);
       return res.status(500).json({ error: "Internal Server Error" });
     }
-  }
+  }*/
 
-  async create(req, res) {
+  async store(req, res) {
 
-    const Schema = yup.object().shape({
+    /*const Schema = yup.object().shape({
       name: yup.string().required(),
       email: yup.string().required(),
       password: yup.string().required().min(6),
@@ -40,23 +40,19 @@ class UsersController {
     
     if (!(await Schema.isValid(req.body))){
       return res.status(400).json({error: 'validation fails'})
+    }*/
+
+    const { email } = req.body;
+
+    if (await User.findOne({ email })){
+      return res.status(400).json({error: 'this user already exists'})
     }
+
+    const user = await User.create(req.body);
+
+    return res.status(201).json(user);
+  
     
-    try {
-
-      const { email } = req.body
-
-      if (await User.findOne({ email })){
-        return res.status(400).json({error: 'this user already exists'})
-      }
-
-      const user = await User.create(req.body)
-
-      return res.status(201).json(user);
-    } catch (err) {
-      console.error(err);
-      return res.status(500).json({ error: "Internal Server Error" });
-    }
   }
 
   async update(req, res) {

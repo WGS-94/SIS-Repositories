@@ -1,6 +1,5 @@
 require('dotenv').config()
 import express  from "express";
-import path from "path";
 import cors from 'cors';
 import routes from "./routes";
 import serv from 'http';

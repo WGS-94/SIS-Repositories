@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 require('dotenv').config();
 
 class Database {
@@ -8,7 +8,7 @@ class Database {
 
   mongo(){
 
-    this.mongoConnection = mongoose.connect(process.env.MONGO_URL,
+    this.mongoConnection = mongoose.connect(process.env.MONGO_ALT,
     {
       useNewUrlParser: true,
       useFindAndModify: false,
@@ -20,4 +20,5 @@ class Database {
   }
 }
 
-module.exports = new Database()
+export default new Database();
+//module.exports = new Database()
