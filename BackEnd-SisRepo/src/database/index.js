@@ -1,0 +1,21 @@
+const mongoose = require('mongoose')
+require('dotenv').config();
+
+class Database {
+  constructor(){
+    this.mongo()
+  }
+
+  mongo(){
+
+    this.mongoConnection = mongoose.connect(process.env.MONGO_URL,
+    {
+      useNewUrlParser: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+      useCreateIndex: true
+    })
+  }
+}
+
+module.exports = new Database()
