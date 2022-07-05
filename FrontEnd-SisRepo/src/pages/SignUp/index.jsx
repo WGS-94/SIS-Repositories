@@ -1,5 +1,5 @@
 import React from 'react';
-import AstronautAnimate from '../../assets/astronaut-animate-up.svg';
+import AstronautAnimate from '../../assets/astronaut-animate.svg';
 
 import '../SignUp/style.css';
 

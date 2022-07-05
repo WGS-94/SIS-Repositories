@@ -1,0 +1,105 @@
+.main-home-container {
+  background: var(--gray-600);
+  height: 100vh;
+}
+
+.main-home {
+  /*border: 1px solid #fff;*/
+
+  margin-top: -4rem;
+  padding: 2.2rem 6rem;
+  
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  background: transparent;
+  font-size: 16px;
+}
+
+.input-group input {
+  flex: 1;
+  background: var(--gray-600);
+  border: 0;
+  color: var(--gray-100);
+  padding: 0.75rem 1.5rem;
+  height: 54px;
+  border-radius: 8px;
+  border: 2px solid var(--purple-dark);
+}
+
+.input-group input::placeholder {
+  color: var(--gray-300)
+}
+
+/*
+.input-group input:focus {
+  border: 1px solid var(--title);
+}*/
+
+.input-group button {
+  font-weight: 800;
+  border-radius: 8px;
+  border: 0;
+  /*background: var(--purple-dark);*/
+  background: var(--title);
+  color: #2b134b;
+  font-size: 0.875rem;
+  height: 54px;
+  font-size: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  padding: 0.875rem;
+  transition: background 0.1s;
+}
+
+.input-group button:hover {
+  background: var(--title);
+}
+
+main {
+  margin-top: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-700);
+  padding: 1rem;
+
+  border-radius: 8px;
+
+  margin-bottom: 0.75rem;
+}
+
+main .main-home-repo {
+  display: flex;
+  flex-direction: column;
+}
+
+main .main-home-repo p {
+  margin-bottom: 0.5rem;
+}
+
+
+main > button {
+  background: transparent;
+  border: 0;
+}
+
+main > button svg {
+color: var(--gray-300);
+}
+
+main > button svg:hover {
+color: var(--danger);
+}
