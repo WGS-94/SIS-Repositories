@@ -1,5 +1,5 @@
 import User from "../models/User";
-import yup from 'yup';
+import * as yup from 'yup';
 
 class UsersController {
   
@@ -32,16 +32,15 @@ class UsersController {
 
   async store(req, res) {
 
-    /*const Schema = yup.object().shape({
+    const Schema = yup.object().shape({
       name: yup.string().required(),
       email: yup.string().required(),
       password: yup.string().required().min(6),
     })
     
-    
     if (!(await Schema.isValid(req.body))){
       return res.status(400).json({error: 'validation fails'})
-    }*/
+    }
 
     const { email } = req.body;
 
@@ -52,8 +51,6 @@ class UsersController {
     const user = await User.create(req.body);
 
     return res.status(201).json(user);
-  
-    
   }
 
   async update(req, res) {

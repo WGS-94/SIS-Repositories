@@ -8,13 +8,7 @@ class Database {
   }
 
   mongo(){
-    this.mongoConnection = mongoose.connect(process.env.MONGO_URL,
-    {
-      useNewUrlParser: true,
-      useFindAndModify: false,
-      useUnifiedTopology: true,
-      useCreateIndex: true
-    }, () => {
+    this.mongoConnection = mongoose.connect(process.env.MONGO_URL, () => {
       console.log('connected to DB...')
     })
   }

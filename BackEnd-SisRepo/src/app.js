@@ -5,7 +5,7 @@ import routes from "./routes";
 import serv from 'http';
 import io from 'socket.io';
 
-require('./database')
+require('./database');
 
 const corsOptions = {
   origin:'*',
@@ -16,7 +16,6 @@ const corsOptions = {
 class App {
   constructor() {
     this.app = express();
-    
     this.server = serv.Server(this.app)
     this.io = io(this.server)
     this.middlewares();
