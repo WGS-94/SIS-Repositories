@@ -1,5 +1,5 @@
 import React from "react";
-import { Route as ReactDOMRoute, Redirect } from "react-router-dom";
+import { Route as ReactDOMRoute, Navigate } from "react-router-dom";
 
 //import { useAuth } from "../hooks/auth";
 
@@ -14,9 +14,9 @@ const Route = ({ isPrivate, isAuthenticated, ...rest }) => {
         ? (
           isPrivate
         ) : (
-          <Redirect
+          <Navigate
             to={{
-              pathname: '/dashboard',
+              pathname: '/home',
               state: { from: location }
             }}
           />

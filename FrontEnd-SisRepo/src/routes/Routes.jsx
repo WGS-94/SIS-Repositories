@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
-import Route from "./PrivateRoutes";
+import Route from "../routes/PrivateRoutes";
 
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';

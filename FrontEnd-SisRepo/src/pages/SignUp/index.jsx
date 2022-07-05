@@ -1,24 +1,24 @@
 import React from 'react'
 
-export default function SignIn() {
+export default function SignUp() {
   return (
-    <div class="main-login">
-    <div class="left-login">
-      <h1>Faça cadastro<br>E registre os seus repositórios</br></h1>
+    <div className="main-login">
+    <div className="left-login">
+      <h1>Faça login E entre para o nosso time</h1>
       <img src="astronaut-animate.svg" alt="Astronaut" />
     </div>
-    <div class="right-login">
-      <div class="card-login">
+    <div className="right-login">
+      <div className="card-login">
         <h1>LOGO</h1>
-        <div class="textField">
-          <label for="user">Usuário</label>
+        <div className="textField">
+          <label htmlFor="user">Usuário</label>
           <input type="text" name="user" placeholder="Usuário" />
         </div>
-        <div class="textField">
-          <label for="password">Usuário</label>
+        <div className="textField">
+          <label htmlFor="password">Usuário</label>
           <input type="password" name="password" placeholder="Senha" />
         </div>
-        <button class="btn-login">Cadastrar</button>
+        <button className="btn-login">Cadastrar</button>
       </div>
     </div>
     </div>

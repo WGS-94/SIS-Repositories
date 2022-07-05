@@ -20,7 +20,7 @@ const Route = ({ isPrivate = false, component: Component, ...rest }) => {
                 isPrivate ||
                 location.pathname.includes("compartilhe-seus-resultados")
                   ? "/"
-                  : "dashboard",
+                  : "home",
               state: { from: location },
             }}
           />
