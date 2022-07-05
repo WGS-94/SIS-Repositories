@@ -33,7 +33,7 @@ export default function Home() {
             <p>Link do repositório: </p>
           </div>
           <button type="button" data-testid="remove-task-button">
-            <Trash size={32} />
+            <Trash size={28} />
           </button>
         </main>
 
@@ -43,7 +43,7 @@ export default function Home() {
             <p>Link do repositório: </p>
           </div>
           <button type="button" data-testid="remove-task-button">
-            <Trash size={32} />
+            <Trash size={28} />
           </button>
         </main>
       </section>
