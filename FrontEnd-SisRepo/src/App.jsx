@@ -1,11 +1,11 @@
 import './globalStyle.css';
 
+import Routes from './routes/Routes';
+
 function App() {
 
   return (
-    <div className="App">
-      <h1>Olá mundo heheheh</h1>
-    </div>
+    <Routes />
   )
 }
 
