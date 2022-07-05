@@ -1,6 +1,6 @@
 import User from "../models/User";
 import Repository from '../models/Repository';
-import yup from 'yup';
+import * as yup from 'yup';
 
 class RepoController {
   
@@ -24,24 +24,22 @@ class RepoController {
     }
   }
 
-  async create(req, res) {
+  async store(req, res) {
 
     const Schema = yup.object().shape({
       name: yup.string().required()
     })
-    
-    
+
+    if (!(await Schema.isValid(req.body))){
+      return res.status(400).json({error: 'validation fails'})
+    }
     
     try {
 
       const { user_id } = req.params;
       const { name, url } = req.body;
 
-      if (!(await Schema.isValid(req.body))){
-        return res.status(400).json({error: 'validation fails'})
-      }
-
-      const user = await User.findById({ user_id });
+      const user = await User.findById({ _id: user_id });
 
       if (!user) {
         return res.status(404).json();

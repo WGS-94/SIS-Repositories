@@ -1,5 +1,5 @@
 import User from '../models/User';
-import yup from 'yup';
+import * as yup from 'yup';
 
 class SessionController {
   async store(req, res){
@@ -20,7 +20,6 @@ class SessionController {
     if (!user) {
       return res.status(400).json({error: 'user not found'})
     }
-
 
     if(! (await user.passwordCompare(password))){
       return res.status(401).json({error: 'Password does not match'})
