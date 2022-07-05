@@ -82,4 +82,4 @@ class RepoController {
   }
 }
 
-export default new RepoController();
+module.exports = new RepoController();

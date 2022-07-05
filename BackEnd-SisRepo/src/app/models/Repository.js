@@ -19,4 +19,4 @@ const RepoSchema = new mongoose.Schema({
   timestamps: true
 }); 
 
-export default mongoose.model('Repository', RepoSchema);
+module.exports = new mongoose.model('Repository', RepoSchema);

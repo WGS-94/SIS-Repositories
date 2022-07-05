@@ -33,4 +33,4 @@ class SessionController {
   }
 }
 
-export default new SessionController();
+module.exports = new SessionController();

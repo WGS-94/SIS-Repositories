@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 require('dotenv').config();
 
 class Database {
@@ -19,5 +20,4 @@ class Database {
   }
 }
 
-export default new Database();
-//module.exports = new Database()
+module.exports = new Database()
