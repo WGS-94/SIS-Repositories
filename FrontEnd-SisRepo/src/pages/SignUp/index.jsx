@@ -1,25 +1,41 @@
-import React from 'react'
+import React from 'react';
+import AstronautAnimate from '../../assets/astronaut-animate-up.svg';
 
-export default function SignUp() {
+import './style.css';
+
+export default function SignIn() {
   return (
     <div className="main-login">
     <div className="left-login">
-      <h1>Faça login E entre para o nosso time</h1>
-      <img src="astronaut-animate.svg" alt="Astronaut" />
+      <div className="left-login-title">
+        <h1>Cadastra-se</h1>
+        <h2>E registre seus repositórios</h2>
+      </div>
+      <img src={AstronautAnimate} alt="Astronaut" />
     </div>
     <div className="right-login">
-      <div className="card-login">
-        <h1>LOGO</h1>
-        <div className="textField">
-          <label htmlFor="user">Usuário</label>
-          <input type="text" name="user" placeholder="Usuário" />
+      <div className="right-login-items">
+        <div className="card-login">
+          <h1>SisRepo</h1>
+          <div className="textField">
+            <label htmlFor="name">Nome</label>
+            <input type="text" name="name" />
+          </div>
+          <div className="textField">
+            <label htmlFor="email">E-mail</label>
+            <input type="text" name="email" />
+          </div>
+          <div className="textField">
+            <label htmlFor="password">Senha</label>
+            <input type="password" name="password" />
+          </div>
+          <button className="btn-login">Entrar</button>
         </div>
-        <div className="textField">
-          <label htmlFor="password">Usuário</label>
-          <input type="password" name="password" placeholder="Senha" />
+        <div className="right-login-link">
+          <a href="/">Já tem uma conta? <span>Faça login</span></a>
         </div>
-        <button className="btn-login">Cadastrar</button>
       </div>
+      
     </div>
     </div>
   );

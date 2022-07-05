@@ -1,19 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
-
 .main-login {
   width: 100vw;
   height: 100vh;
-  background: #201b2c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +15,13 @@ body {
   align-items: center;
 }
 
-.left-login > h1 {
+.left-login .left-login-title > h1 {
   font-size: 3vw;
   color: #77ffc0;
 }
 
 .left-login > img {
-  width: 35vw;
+  width: 40vw;
 }
 
 .right-login {
@@ -45,24 +32,35 @@ body {
   align-items: center;
 }
 
-.card-login {
+.right-login-items {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px 35px;
+  background: var(--gray-900);
+  border-radius: 20px;
+}
+
+.card-login {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 35px;
-  background: #2f2841;
+  background: var(--gray-900);
   border-radius: 20px;
-  /*box-shadow: 0px 10px 40px #00000056;*/
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0px 10px 40px #00000056;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);*/
 }
 
 .card-login > h1 {
-  color: #00ff88;
+  color: var(--title);
+  font-size: 3rem;
   font-weight: 800;
   margin: 0;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .textField {
@@ -80,12 +78,16 @@ body {
   border: none;
   border-radius: 10px;
   padding: 15px;
-  background: #514869;
+  background: var(--gray-700);
   color: #f0ffffde;
   font-size: 12pt;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);*/
   outline: none;
   box-sizing: border-box;
+}
+
+.textField > input:focus {
+  border: 1px solid var(--title);
 }
 
 .textField  > input::placeholder {
@@ -108,9 +110,22 @@ body {
   font-weight: 800;
   letter-spacing: 3px;
   color: #2b134b;
-  background: #00ff88;
+  background: var(--title);
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.right-login-link > a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #f0ffffde;
+}
+
+.right-login-link span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--title);
 }
 
 @media only screen and (max-width: 950px) {
