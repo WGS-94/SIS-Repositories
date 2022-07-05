@@ -12,12 +12,12 @@ routes.post('/users', UserController.store);
 routes.post('/sessions', SessionControler.store);
 routes.get('/users', UserController.index);
 routes.get('/users/:id', UserController.show);
-routes.get('/users/:id', UserController.update);
+routes.put('/users/:id', UserController.update);
 
 routes.use(AuthMiddleware);
 
 routes.get('/users/:user_id/repositories', RepoConctroller.index);
 routes.post('/users/:user_id/repositories', RepoConctroller.store);
-routes.delete('/users/:user_id/repositories', RepoConctroller.destroy);
+routes.delete('/users/:user_id/repositories/:repository_id', RepoConctroller.destroy);
 
 export default routes;

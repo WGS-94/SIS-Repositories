@@ -9,7 +9,7 @@ class RepoController {
 
       const { user_id } = req.params;
 
-      const user = await User.findById({ user_id });
+      const user = await User.findById({ _id: user_id });
 
       if (!user) {
         return res.status(404).json();
@@ -70,9 +70,12 @@ class RepoController {
   async destroy(req, res) {
     try {
 
-      await Repository.findByIdAndDelete(req.params.id);
+      const { repository_id } = req.params;
 
-      return res.send();
+      await Repository.findByIdAndDelete({ _id: repository_id});
+
+      return res.status(201).json({ message: "Excluido com Sucesso!"});
+      //return res.send();
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: "Internal Server Error" });
