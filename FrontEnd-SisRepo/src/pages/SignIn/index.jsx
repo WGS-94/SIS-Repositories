@@ -1,6 +1,7 @@
 import React from 'react';
 import AstronautAnimate from '../../assets/astronaut-animate.svg';
-import './SignIn.module.css';
+
+import '../SignIn/style.css';
 
 export default function SignIn() {
   return (

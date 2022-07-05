@@ -1,12 +1,12 @@
 import React from 'react';
 import AstronautAnimate from '../../assets/astronaut-animate-up.svg';
 
-import './style.css';
+import '../SignUp/style.css';
 
-export default function SignIn() {
+export default function SignUp() {
   return (
     <div className="main-login">
-    <div className="left-login">
+      <div className="left-login">
       <div className="left-login-title">
         <h1>Cadastra-se</h1>
         <h2>E registre seus repositórios</h2>
@@ -35,7 +35,6 @@ export default function SignIn() {
           <a href="/">Já tem uma conta? <span>Faça login</span></a>
         </div>
       </div>
-      
     </div>
     </div>
   );
