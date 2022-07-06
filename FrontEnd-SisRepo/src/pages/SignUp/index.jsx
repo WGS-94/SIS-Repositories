@@ -29,7 +29,7 @@ export default function SignUp() {
             <label htmlFor="password">Senha</label>
             <input type="password" name="password" />
           </div>
-          <button className="btn-login">Entrar</button>
+          <button className="btn-login">Cadastrar</button>
         </div>
         <div className="right-login-link">
           <a href="/">Já tem uma conta? <span>Faça login</span></a>

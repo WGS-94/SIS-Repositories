@@ -1,9 +1,46 @@
 import React from 'react';
+import { useAuth } from "../../hooks/auth";
+import { Link, useHistory } from "react-router-dom";
+import { Form, Input } from "@rocketseat/unform";
 import AstronautAnimate from '../../assets/astronaut-animate.svg';
 
 import '../SignIn/style.css';
 
 export default function SignIn() {
+
+  const history = useHistory();
+  const { signIn, loading, setLoading } = useAuth();
+
+  async function handleSubmit({ email, password }) {
+
+    // event.preventDefault()
+     if (!email || !password ) {
+       //return toast.error("Não foi possível fazer login. Preencha todos os campos corretamente!");
+
+       alert('Não foi possível fazer login')
+     }
+
+      console.log(email, password)
+ 
+     try {
+       await signIn({ email, password },
+         {
+           headers: {
+             "Content-Type": "application/json",
+           },
+         }
+       );
+ 
+       history.push("/home");
+ 
+       //toast.success(`Bem vindo, Login efetuado com sucesso!`);
+     } catch (error) {
+       //setLoading(false);
+       alert('Senha e E-mail incorretos')
+       //toast.error("Senha ou E-mail incorretos!");
+     }
+   }
+
   return (
     <div className="main-login">
     <div className="left-login">
@@ -15,20 +52,30 @@ export default function SignIn() {
     </div>
     <div className="right-login">
       <div className="right-login-items">
-        <div className="card-login">
+        <Form className="card-login" onSubmit={handleSubmit}>
           <h1>SisRepo</h1>
           <div className="textField">
-            <label htmlFor="user">E-mail</label>
-            <input type="text" name="user" />
+            <label htmlFor="email">E-mail</label>
+            <Input 
+              type="text" 
+              name="email" 
+              id="email"
+            />
           </div>
           <div className="textField">
             <label htmlFor="password">Senha</label>
-            <input type="password" name="password" />
+            <Input 
+              type="password" 
+              name="password" 
+              id="password"
+            />
           </div>
-          <button className="btn-login">Entrar</button>
-        </div>
+          <button type="submit" className="btn-login">
+            {loading ? <i style={{ fontSize: 20 }} className="fa fa-spinner fa-pulse"/> : 'Entrar' }
+          </button>
+        </Form>
         <div className="right-login-link">
-          <a href="/signUp">Ainda não tem uma conta? <span>Cadastra-se</span></a>
+          <Link to="/signUp">Ainda não tem uma conta? <span>Cadastra-se</span></Link>
         </div>
       </div>
       
