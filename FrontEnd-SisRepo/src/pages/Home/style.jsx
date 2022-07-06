@@ -6,7 +6,7 @@ export const MainHomeContainer = styled.div`
 `;
 
 export const MainHomeContent = styled.section`
-  border: 1px solid #fff;
+  //border: 1px solid #fff;
 
   margin-top: -4rem;
   padding: 2.2rem 6rem;
@@ -57,4 +57,39 @@ export const InputGroup = styled.div`
     padding: 0.875rem;
     transition: background 0.1s;
   }
+`;
+
+export const Main = styled.main`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-700);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 0.5rem;
+      color: var(--gray-300)
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+  }
+
+  svg {
+    color: var(--gray-300);
+
+    &:hover {
+      color: var(--danger);
+    }
+  }
+  
 `;

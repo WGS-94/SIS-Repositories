@@ -1,15 +1,21 @@
 import React from 'react';
-
+import { useAuth } from "../../hooks/auth";
 import { SignOut } from 'phosphor-react';
 
 import './style.css';
 
 export default function Header() {
+
+  const { signOut } = useAuth();
+
   return (
     <header className="header">
       <div>
         <h1>SisRepo</h1>
-        <button>
+        <button
+          type='button'
+          onClick={signOut}
+        >
           Sair
           <SignOut size={24} />
         </button>

@@ -27,7 +27,7 @@ export default function Home() {
           </S.InputGroup>
         </header>
 
-        <main>
+        <S.Main>
           <div className="main-home-repo">
             <p>Nome do repositório: </p>
             <p>Link do repositório: </p>
@@ -35,17 +35,17 @@ export default function Home() {
           <button type="button" data-testid="remove-task-button">
             <Trash size={28} />
           </button>
-        </main>
+        </S.Main>
 
-        <main>
-          <div className="main-home-repo">
+        <S.Main>
+          <div>
             <p>Nome do repositório: </p>
             <p>Link do repositório: </p>
           </div>
           <button type="button" data-testid="remove-task-button">
             <Trash size={28} />
           </button>
-        </main>
+        </S.Main>
       </S.MainHomeContent>
     </S.MainHomeContainer>
   )
