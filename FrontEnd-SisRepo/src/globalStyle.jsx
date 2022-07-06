@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
-/*@import "react-toastify/dist/ReactToastify.css";*/
+import "react-toastify/dist/ReactToastify.css";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
 
 :root {
   --background: #201b2c;
@@ -59,3 +61,7 @@ body, input, textarea, button {
 button, .checkmark {
   cursor: pointer;
 }
+
+`
+
+export default GlobalStyle;

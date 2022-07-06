@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth } from "../../hooks/auth";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Input } from "@rocketseat/unform";
+import { toast } from "react-toastify";
 import AstronautAnimate from '../../assets/astronaut-animate.svg';
 
 import '../SignIn/style.css';
@@ -15,9 +16,7 @@ export default function SignIn() {
 
     // event.preventDefault()
      if (!email || !password ) {
-       //return toast.error("Não foi possível fazer login. Preencha todos os campos corretamente!");
-
-       alert('Não foi possível fazer login')
+       return toast.error("Não foi possível fazer login. Preencha todos os campos corretamente!");
      }
 
       console.log(email, password)
@@ -33,11 +32,10 @@ export default function SignIn() {
  
        history.push("/home");
  
-       //toast.success(`Bem vindo, Login efetuado com sucesso!`);
+       toast.success(`Bem vindo, Login efetuado com sucesso!`);
      } catch (error) {
        setLoading(false);
-       alert('Senha e E-mail incorretos')
-       //toast.error("Senha ou E-mail incorretos!");
+       toast.error("Senha ou E-mail incorretos!");
      }
    }
 

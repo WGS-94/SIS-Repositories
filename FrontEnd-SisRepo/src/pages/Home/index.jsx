@@ -3,16 +3,16 @@ import { PlusCircle, Trash } from 'phosphor-react';
 
 import Header from '../../components/Header';
 
-import './style.css'; 
+import * as S from './style'; 
 
 export default function Home() {
   return (
-    <div className='main-home-container'>
+    <S.MainHomeContainer>
       <Header />
-      <section className='main-home container'>
+      <S.MainHomeContent className='container'>
 
         <header>
-          <div className="input-group">
+          <S.InputGroup>
             <input 
               type="text" 
               placeholder="Adicione um novo repositório" 
@@ -24,7 +24,7 @@ export default function Home() {
               Adicionar
             <PlusCircle size={24} />
             </button>
-          </div>
+          </S.InputGroup>
         </header>
 
         <main>
@@ -46,7 +46,7 @@ export default function Home() {
             <Trash size={28} />
           </button>
         </main>
-      </section>
-    </div>
+      </S.MainHomeContent>
+    </S.MainHomeContainer>
   )
 }
