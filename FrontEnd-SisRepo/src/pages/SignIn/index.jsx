@@ -35,7 +35,7 @@ export default function SignIn() {
  
        //toast.success(`Bem vindo, Login efetuado com sucesso!`);
      } catch (error) {
-       //setLoading(false);
+       setLoading(false);
        alert('Senha e E-mail incorretos')
        //toast.error("Senha ou E-mail incorretos!");
      }
@@ -52,7 +52,7 @@ export default function SignIn() {
     </div>
     <div className="right-login">
       <div className="right-login-items">
-        <Form className="card-login" onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="card-login">
           <h1>SisRepo</h1>
           <div className="textField">
             <label htmlFor="email">E-mail</label>
@@ -71,7 +71,7 @@ export default function SignIn() {
             />
           </div>
           <button type="submit" className="btn-login">
-            {loading ? <i style={{ fontSize: 20 }} className="fa fa-spinner fa-pulse"/> : 'Entrar' }
+            {loading ? <i style={{ fontSize: 32, color: '#2b134b' }} className="fa fa-spinner fa-pulse"/> : 'Entrar' }
           </button>
         </Form>
         <div className="right-login-link">
