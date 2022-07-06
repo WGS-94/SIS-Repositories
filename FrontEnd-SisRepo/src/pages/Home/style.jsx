@@ -55,7 +55,7 @@ export const InputGroup = styled.div`
     cursor: pointer;
 
     padding: 0.875rem;
-    transition: background 0.1s;
+    transition: background 0.2s;
   }
 `;
 
@@ -75,7 +75,22 @@ export const Main = styled.main`
 
     p {
       margin-bottom: 0.5rem;
-      color: var(--gray-300)
+      color: var(--gray-300);
+
+      span {
+        color: var(--gray-100);
+        margin-left: 0.5rem;
+      }
+      
+      a {
+        text-decoration: none;
+        color: var(--blue);
+        margin-left: 0.5rem;
+
+        &:hover {
+          color: var(--blue-dark);
+        }
+      }
     }
   }
 

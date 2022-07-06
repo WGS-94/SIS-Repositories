@@ -37,7 +37,7 @@ header.header div button {
   cursor: pointer;
 
   padding: 0.875rem;
-  transition: background 0.1s;
+  transition: background 0.2s;
 }
 
 header.header div button:hover {

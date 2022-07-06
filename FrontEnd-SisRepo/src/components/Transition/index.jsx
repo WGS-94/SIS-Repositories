@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 import clipBoardImg from '../../assets/Clipboard.svg';
 
-import { Container } from './style.jsx';
+import { Container } from './style';
 
 function Transition() {
   return (
     <Container>
       <img src={clipBoardImg } alt="" />
-      <p>Nenhuma máquina cadastrada!</p>
-      <span>Clique no botão acima ou neste link <Link to="/add-new-repository"> adicnionar nova máquina</Link></span>
+      <h2>Nenhum repositório cadastrado!</h2>
+      <p>Clique no botão acima ou <span>👉</span> <Link> adicnionar nova máquina</Link></p>
     </Container>
   )
 }
