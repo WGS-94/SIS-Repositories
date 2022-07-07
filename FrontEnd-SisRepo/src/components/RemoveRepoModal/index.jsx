@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 import closeImg from '../../assets/close.svg';
 import api from '../../services/api';
 
+import { ArrowCircleLeft, PlusCircle } from 'phosphor-react';
+
 import { Container, Button, ModalContent } from './style';
 
 function RemoveMachineModal({ onRequestClose }) {
@@ -31,12 +33,21 @@ function RemoveMachineModal({ onRequestClose }) {
         <img src={closeImg} alt="Fechar modal" />
       </Button>
       <ModalContent>
-        <p>Você tem certeza que deseja remover esta máquina da lista?</p>
-        <span>Por favor, confirme abaixo.</span>
+        <p>Adiconar Repositório</p>
+        <input type="text" name='repo' placeholder='Link repositório'/>
         <div>
-          <button onClick={onRequestClose}>Não</button>
+          {/*<button 
+            type='button'
+            onClick={onRequestClose}>
+            <ArrowCircleLeft size={24} />
+            Voltar
+          </button>*/}
           <button
-            onClick={() => {handleRemoveMachine(); onRequestClose()} }>Sim</button>
+            type='button'
+            onClick={() => {handleRemoveMachine(); onRequestClose()} }>
+            Adicionar
+            <PlusCircle size={24} />
+          </button>
         </div>
       </ModalContent>
     </Container>

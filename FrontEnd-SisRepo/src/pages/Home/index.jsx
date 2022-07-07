@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import { PlusCircle, Trash } from 'phosphor-react';
+import { PlusCircle, Trash, MagnifyingGlass } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
+import Modal from 'react-modal';
 import Header from '../../components/Header';
 import Transition from '../../components/Transition'
+import RemoveMachineModal from '../../components/RemoveRepoModal';
 import * as S from './style'; 
 
 export default function Home() {
@@ -26,6 +28,10 @@ export default function Home() {
     
   }, []);
 
+  function reload() {
+    window.location.reload();
+  };
+
   function openModal() {
     setIsOpen(true);
   }
@@ -46,11 +52,13 @@ export default function Home() {
           <S.InputGroup>
             <input 
               type="text" 
-              placeholder="Adicione um novo repositório" 
+              placeholder="Pesquisar repositório..." 
+              //placeholder={`${<MagnifyingGlass size={32} />}`}
             />
             <button 
               type="submit" 
               data-testid="add-repo-button" 
+              onClick={openModal}
             >
               Adicionar
             <PlusCircle size={24} />
@@ -90,6 +98,16 @@ export default function Home() {
           <Transition />
         )}
 
+        <Modal 
+          isOpen={modalIsOpen} 
+          onRequestClose={closeModal}
+          overlayClassName="react-modal-overlay"
+          className="react-modal-content"
+          ariaHideApp={false}
+          onHide={reload}
+        >
+          <RemoveMachineModal onExit={reload} onRequestClose={closeModal} />
+        </Modal>
 
         </S.MainHomeContent>
       </S.MainHomeAlign>
