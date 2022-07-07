@@ -14,12 +14,9 @@ export default function SignIn() {
 
   async function handleSubmit({ email, password }) {
 
-    // event.preventDefault()
      if (!email || !password ) {
        return toast.error("Não foi possível fazer login. Preencha todos os campos corretamente!");
      }
-
-      console.log(email, password)
  
      try {
        await signIn({ email, password },
