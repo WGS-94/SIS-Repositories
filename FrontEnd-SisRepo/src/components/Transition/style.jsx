@@ -13,23 +13,26 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  p {
+  h2 {
     font-size: 2rem;
-    color: #666;
+    color: var(--gray-400);
     font-weight: bold;
     margin: 1rem 0;
     line-height: 1.6;
   }
 
-  span {
-    font-size: 1.3rem;
-    color: #666;
-    font-weight: 400;
+  p{
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    font-weight: bold;
   }
 
-  a {
-    text-decoration: none;
-    color: green;
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--title);
+    padding-left: 0.5rem;
   }
 
 `;

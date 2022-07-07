@@ -10,7 +10,8 @@ function Transition() {
     <Container>
       <img src={clipBoardImg } alt="" />
       <h2>Nenhum repositório cadastrado!</h2>
-      <p>Clique no botão acima ou <span>👉</span> <Link> adicnionar nova máquina</Link></p>
+      <p>Clique no botão acima ou <span>👉</span> 
+      <button> adicnionar novo repositório</button></p>
     </Container>
   )
 }

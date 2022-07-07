@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { PlusCircle, Trash } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import Header from '../../components/Header';
-
+import Transition from '../../components/Transition'
 import * as S from './style'; 
-import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -39,7 +39,8 @@ export default function Home() {
   return (
     <S.MainHomeContainer>
       <Header />
-      <S.MainHomeContent className='container'>
+      <S.MainHomeAlign>
+        <S.MainHomeContent>
 
         <header>
           <S.InputGroup>
@@ -71,21 +72,27 @@ export default function Home() {
           </div>
         )}
 
+        {data.length > 0 ?
+          <div>
+          {data.map((repository) => (
+            <S.Main key={repository._id}>
+              <div>
+                <p>NOME: <span>{repository.name}</span></p>
+                <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
+              </div>
+              <button type="button" data-testid="remove-repo-button">
+                <Trash size={28} />
+              </button>
+            </S.Main>
+          ))}
+          </div> 
+          : (
+          <Transition />
+        )}
 
-        {data.map((repository) => (
-          <S.Main key={repository._id}>
-            <div className="main-home-repo">
-              <p>NOME: <span>{repository.name}</span></p>
-              <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
-            </div>
-            <button type="button" data-testid="remove-task-button">
-              <Trash size={28} />
-            </button>
-          </S.Main>
-        ))}
-        
 
-      </S.MainHomeContent>
+        </S.MainHomeContent>
+      </S.MainHomeAlign>
     </S.MainHomeContainer>
   )
 }

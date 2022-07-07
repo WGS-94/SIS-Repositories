@@ -5,10 +5,20 @@ export const MainHomeContainer = styled.div`
   height: 100vh;
 `;
 
+export const MainHomeAlign = styled.div`
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+
+  margin-top: -4rem;
+
+  //border: 1px solid #fff;
+`;
+
 export const MainHomeContent = styled.section`
   //border: 1px solid #fff;
 
-  margin-top: -4rem;
+  margin-top: -3rem;
   padding: 2.2rem 6rem;
 `;
 
