@@ -31,20 +31,36 @@ export const InputGroup = styled.div`
   background: transparent;
   font-size: 16px;
 
-  input {
+  div {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--gray-600);
-    border: 0;
     color: var(--gray-100);
-    padding: 0.75rem 1.5rem;
-    height: 54px;
-    border-radius: 8px;
     border: 2px solid var(--title);
+    border-radius: 8px;
 
-    &::placeholder {
-      color: var(--gray-300)
+    svg {
+      margin-left: 1rem;
+      cursor: pointer;
     }
-  }
+
+    input {
+      flex: 1;
+      border: 0;
+      background: var(--gray-600);
+      color: var(--gray-100);
+      padding: 0.75rem 0.6rem;
+      height: 54px;
+      border-radius: 8px;
+      
+
+      &::placeholder {
+        color: var(--gray-300)
+      }
+    }
+}
 
   button {
     font-weight: 800;

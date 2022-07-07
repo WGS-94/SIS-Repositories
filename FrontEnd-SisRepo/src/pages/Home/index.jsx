@@ -53,11 +53,14 @@ export default function Home() {
 
         <header>
           <S.InputGroup>
-            <input 
-              type="text" 
-              placeholder="Pesquisar repositório..." 
-              //placeholder={`${<MagnifyingGlass size={32} />}`}
-            />
+            <div>
+              <MagnifyingGlass size={24} style={{ color: '#808080'}} />
+              <input 
+                type="text" 
+                placeholder="Pesquisar repositório..." 
+                //placeholder={`${<MagnifyingGlass size={32} />}`}
+              />
+            </div>
             <button 
               type="submit" 
               data-testid="add-repo-button" 
