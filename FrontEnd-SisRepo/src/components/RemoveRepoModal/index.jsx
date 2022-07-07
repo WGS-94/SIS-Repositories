@@ -11,16 +11,17 @@ function RemoveMachineModal({ onRequestClose }) {
 
   async function handleRemoveMachine() {
 
-    const machineID = localStorage.getItem("@mmsystem:machineID");
+    /*const repository_id = localStorage.getItem("@mmsystem:repositoryID");
+    const user_id = localStorage.getItem("@mmsystem:userID");*/
 
     try {
-      await api.delete(`/machines/${machineID}`);
+     /* await api.post(`/users/${user_id}/repositories/${repository_id}`);
 
-      toast.success("Máquina removida com sucesso");
+      toast.success("Repositório cadastrado com sucesso");*/
 
     } catch (error) {
       //console.log("ERRO", error);
-      return toast.error("Não foi possível remover esta máquina");
+      return toast.error("Não foi possível cadastrar este repositório");
     }
   }
 

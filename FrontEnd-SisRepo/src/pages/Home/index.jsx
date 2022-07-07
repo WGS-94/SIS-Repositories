@@ -72,6 +72,7 @@ export default function Home() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              height: 80,
               paddingTop: 10
             }}
           >
@@ -80,7 +81,7 @@ export default function Home() {
           </div>
         )}
 
-        {data.length > 0 ?
+        {data.length >= 0 ?
           <div>
           {data.map((repository) => (
             <S.Main key={repository._id}>

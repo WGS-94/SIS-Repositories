@@ -17,6 +17,7 @@ header.header div {
 header.header div h1 {
   font-size: 2rem;
   color: var(--title);
+  cursor: pointer;
 }
 
 header.header div button {
