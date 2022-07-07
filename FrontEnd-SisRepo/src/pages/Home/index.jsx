@@ -5,7 +5,7 @@ import api from '../../services/api';
 import Modal from 'react-modal';
 import Header from '../../components/Header';
 import Transition from '../../components/Transition'
-import RemoveMachineModal from '../../components/RemoveRepoModal';
+import CreateRepoModal from '../../components/CreateRepoModal';
 import * as S from './style'; 
 
 export default function Home() {
@@ -92,7 +92,7 @@ export default function Home() {
             <S.Main key={repository._id}>
               <div>
                 <p>USUÁRIO: <span>{repository.name.substring(0, repository.name.indexOf('/'))}</span></p>
-                <p>NOME DO REPOSITÓRIO: <span>{repository.name.substring(repository.name.indexOf('/')+ 1)}</span></p>
+                <p>PROJETO: <span>{repository.name.substring(repository.name.indexOf('/')+ 1)}</span></p>
                 <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
               </div>
               <button 
@@ -117,7 +117,7 @@ export default function Home() {
           ariaHideApp={false}
           onHide={reload}
         >
-          <RemoveMachineModal onExit={reload} onRequestClose={closeModal} />
+          <CreateRepoModal onExit={reload} onRequestClose={closeModal} />
         </Modal>
 
         </S.MainHomeContent>

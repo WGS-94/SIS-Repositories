@@ -3,21 +3,23 @@ import { toast } from 'react-toastify';
 import closeImg from '../../assets/close.svg';
 import api from '../../services/api';
 
-import { ArrowCircleLeft, PlusCircle } from 'phosphor-react';
+import { PlusCircle } from 'phosphor-react';
 
 import { Container, Button, ModalContent } from './style';
 
-function RemoveMachineModal({ onRequestClose }) {
+export default function CreateRepositoryModal({ onRequestClose }) {
 
-  async function handleRemoveMachine() {
+  async function handleCreateRepository() {
 
-    /*const repository_id = localStorage.getItem("@mmsystem:repositoryID");
-    const user_id = localStorage.getItem("@mmsystem:userID");*/
+    const user_id = localStorage.getItem("@mmsystem:userID");
 
     try {
-     /* await api.post(`/users/${user_id}/repositories/${repository_id}`);
+      await api.post(`/users/${user_id}/repositories`, {
+        user_id,
+        
+      });
 
-      toast.success("Repositório cadastrado com sucesso");*/
+      toast.success("Repositório cadastrado com sucesso");
 
     } catch (error) {
       //console.log("ERRO", error);
@@ -37,15 +39,9 @@ function RemoveMachineModal({ onRequestClose }) {
         <p>Adiconar Repositório</p>
         <input type="text" name='repo' placeholder='Link repositório'/>
         <div>
-          {/*<button 
-            type='button'
-            onClick={onRequestClose}>
-            <ArrowCircleLeft size={24} />
-            Voltar
-          </button>*/}
           <button
             type='button'
-            onClick={() => {handleRemoveMachine(); onRequestClose()} }>
+            onClick={() => {handleCreateRepository(); onRequestClose()} }>
             Adicionar
             <PlusCircle size={24} />
           </button>
@@ -54,5 +50,3 @@ function RemoveMachineModal({ onRequestClose }) {
     </Container>
   )
 }
-
-export default RemoveMachineModal;
