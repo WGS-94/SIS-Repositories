@@ -39,9 +39,12 @@ export default function Home() {
   function closeModal() {
     setIsOpen(false);
     reload();
-    
   }
-  
+
+  const handleDeletRepository = (repository) => {
+    console.log(repository)
+  }
+
   return (
     <S.MainHomeContainer>
       <Header />
@@ -66,14 +69,16 @@ export default function Home() {
           </S.InputGroup>
         </header>
 
+        <h3 style={{ textAlign: 'center', marginTop: 30, fontSize: 24}}>Repositórios</h3>
+
         {loading && (
           <div
             style={{
               display: "flex",
               justifyContent: "center",
+              minHeight: '50vh',
               alignItems: "center",
-              height: 80,
-              paddingTop: 10
+              padding: '0 2rem',
             }}
           >
             <i style={{ fontSize: 30, color: '#eee' }} className="fa fa-spinner fa-pulse"></i>
@@ -86,10 +91,15 @@ export default function Home() {
           {data.map((repository) => (
             <S.Main key={repository._id}>
               <div>
-                <p>NOME: <span>{repository.name}</span></p>
+                <p>USUÁRIO: <span>{repository.name.substring(0, repository.name.indexOf('/'))}</span></p>
+                <p>NOME DO REPOSITÓRIO: <span>{repository.name.substring(repository.name.indexOf('/')+ 1)}</span></p>
                 <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
               </div>
-              <button type="button" data-testid="remove-repo-button">
+              <button 
+                type="button" 
+                data-testid="remove-repo-button"
+                onClick={() => handleDeletRepository(repository._id)}
+              >
                 <Trash size={28} />
               </button>
             </S.Main>
