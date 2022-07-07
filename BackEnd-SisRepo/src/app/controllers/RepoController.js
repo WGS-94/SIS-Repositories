@@ -47,7 +47,7 @@ class RepoController {
 
       const repository = await Repository.findOne({
         userId: user_id,
-        name
+        url
       })
 
       if (repository) {
