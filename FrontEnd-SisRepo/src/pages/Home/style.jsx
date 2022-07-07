@@ -51,7 +51,7 @@ export const InputGroup = styled.div`
       border: 0;
       background: var(--gray-600);
       color: var(--gray-100);
-      padding: 0.75rem 0.6rem;
+      padding: 0.75rem 0.7rem;
       height: 54px;
       border-radius: 8px;
       

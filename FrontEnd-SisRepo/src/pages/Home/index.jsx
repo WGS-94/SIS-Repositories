@@ -13,6 +13,7 @@ export default function Home() {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [search, setSearch] = React.useState("");
 
   useEffect(() => {
     async function loadData() {
@@ -58,7 +59,7 @@ export default function Home() {
               <input 
                 type="text" 
                 placeholder="Pesquisar repositório..." 
-                //placeholder={`${<MagnifyingGlass size={32} />}`}
+                onChange={event => setSearch(event.target.value)}
               />
             </div>
             <button 
@@ -89,9 +90,35 @@ export default function Home() {
           </div>
         )}
 
+
+          {/*search.length <= 0 && (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                minHeight: '50vh',
+                alignItems: "center",
+                padding: '0 2rem',
+              }}
+            >
+              <h3 className="home__search-faild">
+                Sem resultado para pesquisa :(
+              </h3>
+            </div>
+          )*/}
+
         {data.length >= 0 ?
           <div>
-          {data.map((repository) => (
+
+          {data.filter(repo => {
+
+            if (search === '') {
+              return repo;
+            } else if (repo.name.toLowerCase().includes(search.toLowerCase())) {
+              return repo;
+            }
+
+          }).map((repository) => (
             <S.Main key={repository._id}>
               <div>
                 <p>USUÁRIO: <span>{repository.name.substring(0, repository.name.indexOf('/'))}</span></p>
