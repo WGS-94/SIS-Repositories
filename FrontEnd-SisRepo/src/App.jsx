@@ -12,7 +12,10 @@ function App() {
       <AuthProvider>
         <Routes />
       </AuthProvider>
-      <ToastContainer autoClose={3000} />
+      <ToastContainer 
+        autoClose={3000} 
+        className="toast-container"
+      />
       <GlobalStyle />
     </Router>
   )

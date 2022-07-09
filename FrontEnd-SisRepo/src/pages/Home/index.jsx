@@ -107,7 +107,7 @@ export default function Home() {
             </div>
           )*/}
 
-        {data.length >= 0 ?
+        {data.length > 0 ?
           <div>
 
           {data.filter(repo => {
