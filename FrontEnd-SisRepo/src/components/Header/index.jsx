@@ -2,14 +2,14 @@ import React from 'react';
 import { useAuth } from "../../hooks/auth";
 import { SignOut } from 'phosphor-react';
 
-import './style.css';
+import * as S from './style';
 
 export default function Header() {
 
   const { signOut } = useAuth();
 
   return (
-    <header className="header">
+    <S.Header>
       <div>
         <h1>SisRepo</h1>
         <button
@@ -20,6 +20,6 @@ export default function Header() {
           <SignOut size={24} />
         </button>
       </div>
-    </header>
+    </S.Header>
   )
 }
