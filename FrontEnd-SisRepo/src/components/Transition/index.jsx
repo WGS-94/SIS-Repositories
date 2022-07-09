@@ -5,13 +5,13 @@ import clipBoardImg from '../../assets/Clipboard.svg';
 
 import { Container } from './style';
 
-function Transition() {
+function Transition({ onRequestClose }) {
   return (
     <Container>
       <img src={clipBoardImg } alt="" />
       <h2>Nenhum repositório cadastrado!</h2>
       <p>Clique no botão acima ou <span>👉</span> 
-      <button> adicnionar novo repositório</button></p>
+      <button onClick={onRequestClose}> adicnionar novo repositório</button></p>
     </Container>
   )
 }
