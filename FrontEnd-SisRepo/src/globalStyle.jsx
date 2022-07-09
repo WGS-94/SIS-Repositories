@@ -52,6 +52,19 @@ body, input, textarea, button {
   font-size: 1rem;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--gray-700);       
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #00ff88;     
+  border-radius: 10px;
+}
+
 .container {
   max-width: 1120px;
   margin: 0 auto;
