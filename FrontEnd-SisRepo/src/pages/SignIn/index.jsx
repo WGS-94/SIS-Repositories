@@ -66,7 +66,7 @@ export default function SignIn() {
             />
           </div>
           <button type="submit" className="btn-login">
-            {loading ? <i style={{ fontSize: 30, color: '#2b134b' }} className="fa fa-spinner fa-pulse"/> : 'Entrar' }
+            {loading ? <i style={{ fontSize: 24, color: '#2b134b' }} className="fa fa-spinner fa-pulse"/> : 'Entrar' }
           </button>
         </Form>
         <div className="right-login-link">

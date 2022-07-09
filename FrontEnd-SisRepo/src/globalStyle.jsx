@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  background: var(--gray-700);
+  background: var(--gray-600);
   color: var(--gray-100);
   -webkit-font-smoothing: antialiazed;
 }
