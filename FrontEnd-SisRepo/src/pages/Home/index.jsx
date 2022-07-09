@@ -29,9 +29,9 @@ export default function Home() {
     
   }, []);
 
-  function reload() {
+  /*function reload() {
     window.location.reload();
-  };
+  };*/
 
   function openModal() {
     setIsOpen(true);
@@ -39,7 +39,7 @@ export default function Home() {
 
   function closeModal() {
     setIsOpen(false);
-    reload();
+    //reload();
   }
 
   const handleDeletRepository = (repository) => {
@@ -145,9 +145,9 @@ export default function Home() {
           overlayClassName="react-modal-overlay"
           className="react-modal-content"
           ariaHideApp={false}
-          onHide={reload}
+          //onHide={reload}
         >
-          <CreateRepoModal onExit={reload} onRequestClose={closeModal} />
+          <CreateRepoModal /*onExit={reload}*/ onRequestClose={closeModal} />
         </Modal>
 
         </S.MainHomeContent>
