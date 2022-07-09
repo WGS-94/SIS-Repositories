@@ -22,12 +22,12 @@ export default function CreateRepositoryModal({ onRequestClose }) {
 
     try {
       await api.post(`/users/${user_id}/repositories`, {
-        user_id,
         name,
-        url
+        url,
+        user_id
       });
 
-      console.log(user_id, name, url)
+      console.log('DATA', user_id, name, url);
 
       toast.success("Repositório cadastrado com sucesso");
 
