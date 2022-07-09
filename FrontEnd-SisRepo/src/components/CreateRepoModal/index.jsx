@@ -27,13 +27,11 @@ export default function CreateRepositoryModal({ onRequestClose }) {
         user_id
       });
 
-      console.log('DATA', user_id, name, url);
-
       toast.success("Repositório cadastrado com sucesso");
 
     } catch (error) {
       //console.log("ERRO", error);
-      return toast.error("Não foi possível cadastrar este repositório");
+      return toast.error("Não foi possível remover, repositório já existe");
     }
   }
 

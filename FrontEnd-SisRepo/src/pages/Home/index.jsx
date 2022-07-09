@@ -3,6 +3,7 @@ import { PlusCircle, Trash, MagnifyingGlass } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import Modal from 'react-modal';
+import { toast } from 'react-toastify';
 import Header from '../../components/Header';
 import Transition from '../../components/Transition'
 import CreateRepoModal from '../../components/CreateRepoModal';
@@ -30,7 +31,12 @@ export default function Home() {
   }, []);
 
   function reload() {
-    window.location.reload();
+    
+    setTimeout(()=>{
+      window.location.reload();
+    }, 4000);
+
+    //window.location.reload();
   };
 
   function openModal() {
@@ -42,8 +48,21 @@ export default function Home() {
     reload();
   }
 
-  const handleDeletRepository = (repository) => {
-    console.log(repository)
+  async function handleDeletRepository(repository) {
+
+    const user_id = localStorage.getItem("@SisRepository:userID");
+
+    try {
+
+      await api.delete(`/users/${user_id}/repositories/${repository._id}`);
+      
+      toast.success("Repositório removido com sucesso");
+
+      reload();
+
+      } catch (error) {
+      return toast.error("Não foi possível remover este repositório");
+    }
   }
 
   return (
@@ -128,7 +147,7 @@ export default function Home() {
               <button 
                 type="button" 
                 data-testid="remove-repo-button"
-                onClick={() => handleDeletRepository(repository._id)}
+                onClick={() => handleDeletRepository(repository)}
               >
                 <Trash size={28} />
               </button>
