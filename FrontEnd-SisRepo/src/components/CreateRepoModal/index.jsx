@@ -50,7 +50,7 @@ export default function CreateRepositoryModal({ onRequestClose }) {
         <input 
           type="text" 
           name='url' 
-          placeholder='Link repositório'
+          placeholder='URL do repositório'
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainHomeContainer = styled.div`
   background: var(--gray-600);
-  height: 100vh;
+  height: 0 auto;
 `;
 
 export const MainHomeAlign = styled.div`
