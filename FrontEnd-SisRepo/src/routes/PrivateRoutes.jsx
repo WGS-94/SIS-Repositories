@@ -10,15 +10,13 @@ const Route = ({ isPrivate = false, component: Component, ...rest }) => {
     <ReactDOMRoute
       {...rest}
       render={({ location }) => {
-        return isPrivate === !!user ||
-          location.pathname.includes("compartilhe-seus-resultados") ? (
+        return isPrivate === !!user ? (
           <Component />
         ) : (
           <Redirect
             to={{
               pathname:
-                isPrivate ||
-                location.pathname.includes("compartilhe-seus-resultados")
+                isPrivate
                   ? "/"
                   : "home",
               state: { from: location },
