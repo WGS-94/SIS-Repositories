@@ -56,8 +56,8 @@ export default function SignUp() {
     </div>
     <div className="right-login">
       <div className="right-login-items">
+        <h1>SisRepo</h1>
         <Form onSubmit={handleSubmit} className="card-login">
-          <h1>SisRepo</h1>
           <div className="textField">
             <label htmlFor="name">Nome</label>
             <Input

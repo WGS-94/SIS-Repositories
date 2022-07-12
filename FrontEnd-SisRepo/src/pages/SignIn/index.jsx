@@ -5,7 +5,7 @@ import { Form, Input } from "@rocketseat/unform";
 import { toast } from "react-toastify";
 import AstronautAnimate from '../../assets/astronaut-animate.svg';
 
-import '../SignIn/style.css';
+import * as S from './style';
 
 export default function SignIn() {
 
@@ -37,19 +37,19 @@ export default function SignIn() {
    }
 
   return (
-    <div className="main-login">
-    <div className="left-login">
-      <div className="left-login-title">
+    <S.MainSignIn>
+    <S.MainSignInLeft>
+      <div>
         <h1>Faça login</h1>
         <h2>E registre seus repositórios</h2>
       </div>
       <img src={AstronautAnimate} alt="Astronaut" />
-    </div>
-    <div className="right-login">
-      <div className="right-login-items">
-        <Form onSubmit={handleSubmit} className="card-login">
-          <h1>SisRepo</h1>
-          <div className="textField">
+    </S.MainSignInLeft>
+    <S.MainSignInRignt>
+      <S.MainSignInRigntContent>
+        <h1>SisRepo</h1>
+        <Form onSubmit={handleSubmit} >
+          <div>
             <label htmlFor="email">E-mail</label>
             <Input 
               type="text" 
@@ -57,7 +57,7 @@ export default function SignIn() {
               id="email"
             />
           </div>
-          <div className="textField">
+          <div>
             <label htmlFor="password">Senha</label>
             <Input 
               type="password" 
@@ -65,16 +65,16 @@ export default function SignIn() {
               id="password"
             />
           </div>
-          <button type="submit" className="btn-login">
+          <button type="submit">
             {loading ? <i style={{ fontSize: 24, color: '#2b134b' }} className="fa fa-spinner fa-pulse"/> : 'Entrar' }
           </button>
         </Form>
-        <div className="right-login-link">
+        <S.MainSignInLink>
           <Link to="/signUp">Ainda não tem uma conta? <span>Cadastra-se</span></Link>
-        </div>
-      </div>
+        </S.MainSignInLink>
+      </S.MainSignInRigntContent>
       
-    </div>
-    </div>
+    </S.MainSignInRignt>
+    </S.MainSignIn>
   );
 }
