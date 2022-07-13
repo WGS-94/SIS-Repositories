@@ -5,7 +5,7 @@
 </div>-->
 
 <!-- Title -->
-<h1 align="center"> Sistem de Rgeistros de Repositórios 🔥 </h1>
+<h1 align="center"> Sistem de Registros de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
 <h2> Desafio para Desenvolvedor Junior em uma Empresa </h2>
@@ -25,6 +25,7 @@
 SisRepo é um sistema de registro de repositórios 
 
 ## 🖼️ Imagens do Projeto
+<!--
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
 </div>
@@ -34,6 +35,7 @@ SisRepo é um sistema de registro de repositórios
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/171734894-721b47ca-59b6-44ba-a5cc-caeac6c16340.PNG">
 </div>
+-->
 
 ## 🧰 Tecnologias e Bibliotecas
 
