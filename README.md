@@ -51,18 +51,18 @@ SisRepo é um sistema de registro de repositórios
 ## ⚙️ Rodando o Projeto
 ```bash
 # Clone este repositório para a pasta anterior
-$ git clone https://github.com/WGS-94/Dt-Money-Transation.git
+$ git clone https://github.com/WGS-94/SIS-Repositories
 # ou use a opção de download.
-# Acesse a pasta Dt-Money-Transation
-$ cd Dt-Money-Transation
+# Acesse a pasta SIS-Repositories
+$ cd SIS-Repositories
 # Instale as dependências
 $ yarn install
 ou
 $ npm install
 # Executando o Projeto
-$ yarn start 
+$ yarn dev 
 ou
-$ npm start
+$ npm run dev
 # Acesse http://localhost:3000 no seu navagador
 ```
 Feito com 💖 by WGS-94
