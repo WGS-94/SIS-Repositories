@@ -4,10 +4,10 @@
 </div>-->
 
 <!-- Title -->
-<h1 align="center"> SIS-Repositories - Sistem de Registros de Repositórios 🔥 </h1>
+<h1 align="center"> SIS-Repositories - Sistema de Registros de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
-<h2> Desafio para Desenvolvedor Junior em uma Empresa </h2>
+<h2> Desafio para Desenvolvedor Web Junior em uma Empresa </h2>
 
 <!-- Badges 
 <p align="center">
