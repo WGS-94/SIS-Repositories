@@ -1,11 +1,10 @@
-# SIS-Repositories
 <!-- Logotipo 
 <div align="center">
   <img src="./Assets/ignite.png">
 </div>-->
 
 <!-- Title -->
-<h1 align="center"> Sistem de Registros de Repositórios 🔥 </h1>
+<h1 align="center"> SIS-Repositories - Sistem de Registros de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
 <h2> Desafio para Desenvolvedor Junior em uma Empresa </h2>
