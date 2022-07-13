@@ -20,10 +20,12 @@
 </p>-->
 
 <!-- Sobre o Projeto -->
-## 🚀 Sobre o Projeto
-SisRepo é um sistema de registro de repositórios 
+## 🚀 Sobre o Desafio
+Teste prático para a vaga de Desenvolvedor Web Junior. Criação de um sistema de registro de repositórios, utilizando ReactJS e gerando os dados a partir do consumo de uma API onde são cadastrados os repositórios.
 
-## 🖼️ Imagens do Projeto
+## ✨ Funcionalidades
+
+## 🖼️ Imagens do Desafio
 <!--
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
