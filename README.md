@@ -4,7 +4,7 @@
 </div>-->
 
 <!-- Title -->
-<h1 align="center"> SIS-Repositories - Sistema de Registros de Repositórios 🔥 </h1>
+<h1 align="center"> SIG-Repositories - Sistema de Gerenciamento de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
 <h2> Teste de desenvolvimento de sistemas (REACT e NODE) - Junior </h2>
@@ -26,6 +26,10 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 ## ✨ Funcionalidades
 
  * O sistema apresentará uma página inicial para o usuário informar o Login e Senha e um botão para entrar
+ * Na segunta tela deverá listar automaticamente ao entrar, todos os repositórios que o usuário tiver no banco de dados, como nome do usuário e a url do repositório
+ * Deverá ter uma maneira de pesquisar os repositórios já cadastrados
+ * Exibir a lista de repositórios e um botão para excluir um determinado repositório, fazendo uma pergunta se o usuário realmente deseja excluir
+ * Deverá ter uma forma de adicionar um novo repositório, validando se ele já existe
 
 ## 🖼️ Imagens do Desafio
 <!--
