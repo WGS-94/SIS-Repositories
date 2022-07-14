@@ -7,7 +7,7 @@
 <h1 align="center"> SIS-Repositories - Sistema de Registros de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
-<h2> Desafio para Desenvolvedor Web Junior em uma Empresa </h2>
+<h2> Teste de desenvolvimento de sistemas (REACT e NODE) - Junior </h2>
 
 <!-- Badges 
 <p align="center">
@@ -21,9 +21,11 @@
 
 <!-- Sobre o Projeto -->
 ## 🚀 Sobre o Desafio
-Teste prático para a vaga de Desenvolvedor Web Junior. Criação de um sistema de registro de repositórios, utilizando ReactJS e gerando os dados a partir do consumo de uma API onde são cadastrados os repositórios.
+Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e senha que permita o usuário adicionar repositórios de outras pessoas em um banco de dados não relacional.
 
 ## ✨ Funcionalidades
+
+ Markup : * Bullet list
 
 ## 🖼️ Imagens do Desafio
 <!--
