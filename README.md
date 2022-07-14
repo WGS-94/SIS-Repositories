@@ -47,14 +47,17 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 ## 🧰 Tecnologias e Bibliotecas
 
 * [ReactJS](https://pt-br.reactjs.org/tutorial/tutorial.html)
-  * [Styled Component](https://www.npmjs.com/package/styled-components) - Biblioteca CSS in JS
+  * [Styled Component](https://www.npmjs.com/package/styled-components)
   * [Axios](https://www.npmjs.com/package/axios)
   * [React Modal](https://www.npmjs.com/package/react-modal)
   * [Polished](https://www.npmjs.com/package/polished)
-* [TypeScript](https://www.typescriptlang.org/)
+* [react-toastify](https://www.npmjs.com/package/react-toastify)
 
-### Tools para criar API Fake
- * [MirageJS]()
+### Tools para criar API
+ * [NodeJS](https://nodejs.org/en/)
+
+### Banco de Dados
+* [MongoDB](https://www.mongodb.com/pt-br)
 
 ## ⚙️ Rodando o Projeto
 ```bash
