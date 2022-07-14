@@ -25,7 +25,7 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 
 ## ✨ Funcionalidades
 
- Markup : * Bullet list
+ * O sistema apresentará uma página inicial para o usuário informar o Login e Senha e um botão para entrar
 
 ## 🖼️ Imagens do Desafio
 <!--
