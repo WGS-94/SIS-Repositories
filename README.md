@@ -62,10 +62,10 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 ## ⚙️ Rodando o Projeto
 ```bash
 # Clone este repositório para a pasta anterior
-$ git clone https://github.com/WGS-94/SIS-Repositories
+$ git clone https://github.com/WGS-94/SIG-Repositories
 # ou use a opção de download.
-# Acesse a pasta SIS-Repositories
-$ cd SIS-Repositories
+# Acesse a pasta SIG-Repositories
+$ cd SIG-Repositories
 # Instale as dependências
 $ yarn install
 ou
