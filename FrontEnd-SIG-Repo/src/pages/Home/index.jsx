@@ -34,7 +34,7 @@ export default function Home() {
     
     setTimeout(()=>{
       window.location.reload();
-    }, 4000);
+    }, 3000);
 
     //window.location.reload();
   };
