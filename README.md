@@ -65,7 +65,9 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 $ git clone https://github.com/WGS-94/SIG-Repositories
 # ou use a opção de download.
 # Acesse a pasta SIG-Repositories
-$ cd SIG-Repositories
+# Acesse a pastas BackEnd-SIG-Repo e FrontEnd-SIG-Repo
+# Terminal 1            Terminal 2
+$ cd BackEnd-SIG-Repo   cd FrontEnd-SIG-Repo
 # Instale as dependências
 $ yarn install
 ou
