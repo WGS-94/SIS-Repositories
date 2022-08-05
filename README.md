@@ -51,7 +51,7 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
   * [Axios](https://www.npmjs.com/package/axios)
   * [React Modal](https://www.npmjs.com/package/react-modal)
   * [Polished](https://www.npmjs.com/package/polished)
-* [react-toastify](https://www.npmjs.com/package/react-toastify)
+* [React-Toastify](https://www.npmjs.com/package/react-toastify)
 
 ### Tools para criar API
  * [NodeJS](https://nodejs.org/en/)
