@@ -4,7 +4,7 @@
 </div>-->
 
 <!-- Title -->
-<h1 align="center"> SIG-Repositories - Sistema de Gerenciamento de Repositórios 🔥 </h1>
+<h1> SIG-Repositories - Sistema de Gerenciamento de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
 <h2> Teste de desenvolvimento de sistemas (REACT e NODE) - Junior </h2>
