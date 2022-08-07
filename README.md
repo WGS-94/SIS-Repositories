@@ -32,10 +32,11 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
  * Deverá ter uma forma de adicionar um novo repositório, validando se ele já existe 
 
 ## 🖼️ Imagens do Desafio
-<!--
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/183313746-9ed7e2be-7095-4a7f-a859-04828cb146d6.PNG">
 </div>
+<!--
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/171734884-05790807-3c12-43ab-a301-9052cb3429c4.PNG">
 </div>
