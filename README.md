@@ -29,7 +29,7 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
  * Na segunta tela deverá listar automaticamente ao entrar, todos os repositórios que o usuário tiver no banco de dados, como nome do usuário e a url do repositório;
  * Deverá ter uma maneira de pesquisar os repositórios já cadastrados;
  * Exibir a lista de repositórios e um botão para excluir um determinado repositório, fazendo uma pergunta se o usuário realmente deseja excluir;
- * Deverá ter uma forma de adicionar um novo repositório, validando se ele já existe.
+ * Deverá ter uma forma de adicionar um novo repositório, validando se ele já existe..
 
 ## 🖼️ Imagens do Desafio
 
