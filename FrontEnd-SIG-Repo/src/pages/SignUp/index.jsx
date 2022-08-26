@@ -56,8 +56,8 @@ export default function SignUp() {
         </div>
         <img src={AstronautAnimate} alt="Astronaut" />
       </S.MainSignInLeft>
-    <div className="right-login">
-      <div className="right-login-items">
+    <S.MainSignInRignt>
+      <S.MainSignInRigntContent>
         <h1>SisRepo</h1>
         <Form onSubmit={handleSubmit} className="card-login">
           <div className="textField">
@@ -93,8 +93,8 @@ export default function SignUp() {
         <div className="right-login-link">
           <Link to="/">Já tem uma conta? <span>Faça login</span></Link>
         </div>
-      </div>
-    </div>
+      </S.MainSignInRigntContent>
+    </S.MainSignInRignt>
     </S.MainSignIn>
   );
 }
