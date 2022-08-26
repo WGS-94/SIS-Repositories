@@ -52,7 +52,7 @@ export const MainSignInLeft = styled.div`
     }
 
     img {
-      width: 28%;
+      width: 30%;
     }
   }
 
@@ -81,7 +81,7 @@ export const MainSignInRigntContent = styled.div`
   background: var(--gray-900);
   border-radius: 20px;
 
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 
   > h1 {
       color: var(--title);
@@ -103,7 +103,7 @@ export const MainSignInRigntContent = styled.div`
     /*box-shadow: 0px 10px 40px #00000056;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);*/
 
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
 
   > div {
       width: 100%;
@@ -164,12 +164,48 @@ export const MainSignInRigntContent = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     height: auto;
-    padding: 35px 30px;
+    padding: 30px 25px;
 
     input {
-      height: 40px;
+      /* height: 42px; */
+      border-radius: 4px;
+    }
+
+    label {
+      font-size: 0.6rem;
+    }
+
+    button {
+      /* height: 40px; */
+      font-size: 0.6rem;
+      font-weight: 800;
     }
   }
+
+  @media only screen and (max-width: 280px) {
+    width: 100%;
+    height: auto;
+    padding: 20px 25px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    input {
+      border-radius: 5px; 
+    }
+
+    label {
+      font-size: 0.8rem;
+    }
+
+    button {
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+  }
+
+
   
 `;
 
