@@ -6,6 +6,8 @@ import { Link, useHistory } from "react-router-dom";
 import api from '../../services/api';
 import AstronautAnimate from '../../assets/astronaut-animate.svg';
 
+import * as S from './style';
+
 import '../SignUp/style.css';
 
 export default function SignUp() {
@@ -46,14 +48,14 @@ export default function SignUp() {
     }
   }
   return (
-    <div className="main-login">
-      <div className="left-login">
-      <div className="left-login-title">
-        <h1>Cadastra-se</h1>
-        <h2>E registre seus repositórios</h2>
-      </div>
-      <img src={AstronautAnimate} alt="Astronaut" />
-    </div>
+    <S.MainSignIn>
+      <S.MainSignInLeft>
+        <div>
+          <h1>Cadastra-se</h1>
+          <h2>E registre seus repositórios</h2>
+        </div>
+        <img src={AstronautAnimate} alt="Astronaut" />
+      </S.MainSignInLeft>
     <div className="right-login">
       <div className="right-login-items">
         <h1>SisRepo</h1>
@@ -93,6 +95,6 @@ export default function SignUp() {
         </div>
       </div>
     </div>
-    </div>
+    </S.MainSignIn>
   );
 }
