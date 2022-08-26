@@ -7,12 +7,14 @@ export const MainSignIn = styled.div`
   justify-content: center;
   align-items: center;
 
+  /* border: 1px solid #fff; */
   background: var(--gray-700);
 
   
   @media only screen and (max-width: 600px) {
     flex-direction: column;
   }
+
 `;
 
 export const MainSignInLeft = styled.div`
@@ -22,6 +24,8 @@ export const MainSignInLeft = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* border: 1px solid red; */
 
   > div {
 
@@ -39,12 +43,16 @@ export const MainSignInLeft = styled.div`
     width: 100%;
     height: auto;
 
-    h1 {
+    div {
+      margin-top: 2rem;
+    }
+
+    h1, h2 {
       display: none;
     }
 
     img {
-      width: 50%;
+      width: 28%;
     }
   }
 
@@ -56,6 +64,12 @@ export const MainSignInRignt = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* border: 1px solid #fff; */
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `;
 
 export const MainSignInRigntContent = styled.div`
@@ -66,6 +80,8 @@ export const MainSignInRigntContent = styled.div`
   padding: 30px 35px;
   background: var(--gray-900);
   border-radius: 20px;
+
+  border: 1px solid orange;
 
   > h1 {
       color: var(--title);
@@ -87,6 +103,8 @@ export const MainSignInRigntContent = styled.div`
     /*box-shadow: 0px 10px 40px #00000056;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);*/
 
+    border: 1px solid #fff;
+
   > div {
       width: 100%;
       display: flex;
@@ -94,6 +112,8 @@ export const MainSignInRigntContent = styled.div`
       justify-content: center;
       align-items: flex-start;
       margin-bottom: 10px;
+
+      
       
       > input {
           width: 100%;
@@ -137,14 +157,18 @@ export const MainSignInRigntContent = styled.div`
         box-shadow: 0px 10px 40px -12px #00ff8052;
     }
 
+  }
 
-    @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 950px) {
       width: 85%;
     }
 
-    @media only screen and (max-width: 600px) {
-      width: 100%;
-      height: auto;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    height: auto;
+
+    input {
+      height: 40px;
     }
   }
   
