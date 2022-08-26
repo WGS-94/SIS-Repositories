@@ -99,7 +99,7 @@ export const MainSignInRigntContent = styled.div`
     justify-content: center;
     align-items: center;
     background: var(--gray-900);
-    border-radius: 20px;
+    /* border-radius: 20px; */
     /*box-shadow: 0px 10px 40px #00000056;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);*/
 
@@ -112,13 +112,11 @@ export const MainSignInRigntContent = styled.div`
       justify-content: center;
       align-items: flex-start;
       margin-bottom: 10px;
-
-      
       
       > input {
           width: 100%;
           border: none;
-          border-radius: 10px;
+          border-radius: 8px;
           padding: 15px;
           background: var(--gray-700);
           color: #f0ffffde;
@@ -166,6 +164,7 @@ export const MainSignInRigntContent = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     height: auto;
+    padding: 35px 30px;
 
     input {
       height: 40px;
