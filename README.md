@@ -4,7 +4,7 @@
 </div>-->
 
 <!-- Title -->
-<h1 align="center"> SIG-Repositories - Sistema de Gerenciamento de Repositórios 🔥 </h1>
+<h1> SIG-Repositories - Sistema de Gerenciamento de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
 <h2> Teste de desenvolvimento de sistemas (REACT e NODE) - Junior </h2>
@@ -25,17 +25,18 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 
 ## ✨ Funcionalidades
 
- * O sistema apresentará uma página inicial para o usuário informar o Login e Senha e um botão para entrar
- * Na segunta tela deverá listar automaticamente ao entrar, todos os repositórios que o usuário tiver no banco de dados, como nome do usuário e a url do repositório
- * Deverá ter uma maneira de pesquisar os repositórios já cadastrados
- * Exibir a lista de repositórios e um botão para excluir um determinado repositório, fazendo uma pergunta se o usuário realmente deseja excluir
- * Deverá ter uma forma de adicionar um novo repositório, validando se ele já existe
+ * O sistema apresentará uma página inicial para o usuário informar o Login e Senha e um botão para entrar;
+ * Na segunta tela deverá listar automaticamente ao entrar, todos os repositórios que o usuário tiver no banco de dados, como nome do usuário e a url do repositório;
+ * Deverá ter uma maneira de pesquisar os repositórios já cadastrados;
+ * Exibir a lista de repositórios e um botão para excluir um determinado repositório, fazendo uma pergunta se o usuário realmente deseja excluir;
+ * Deverá ter uma forma de adicionar um novo repositório, validando se ele já existe..
 
 ## 🖼️ Imagens do Desafio
-<!--
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/183313746-9ed7e2be-7095-4a7f-a859-04828cb146d6.PNG">
 </div>
+<!--
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/171734884-05790807-3c12-43ab-a301-9052cb3429c4.PNG">
 </div>
@@ -51,7 +52,7 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
   * [Axios](https://www.npmjs.com/package/axios)
   * [React Modal](https://www.npmjs.com/package/react-modal)
   * [Polished](https://www.npmjs.com/package/polished)
-* [react-toastify](https://www.npmjs.com/package/react-toastify)
+* [React-Toastify](https://www.npmjs.com/package/react-toastify)
 
 ### Tools para criar API
  * [NodeJS](https://nodejs.org/en/)
