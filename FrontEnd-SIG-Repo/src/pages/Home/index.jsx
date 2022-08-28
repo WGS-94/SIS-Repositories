@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import Header from '../../components/Header';
 import Transition from '../../components/Transition'
 import CreateRepoModal from '../../components/CreateRepoModal';
+
 import * as S from './style'; 
 
 export default function Home() {
