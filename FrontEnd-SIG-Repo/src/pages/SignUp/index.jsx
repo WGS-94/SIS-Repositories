@@ -8,7 +8,7 @@ import AstronautAnimate from '../../assets/astronaut-animate.svg';
 
 import * as S from './style';
 
-import '../SignUp/style.css';
+// import '../SignUp/style.css';
 
 export default function SignUp() {
 
@@ -90,9 +90,9 @@ export default function SignUp() {
             {loading ? <i style={{ fontSize: 32, color: '#2b134b' }} className="fa fa-spinner fa-pulse"/> : 'Cadastrar' }
           </button>
         </Form>
-        <div className="right-login-link">
+        <S.MainSignInLink>
           <Link to="/">Já tem uma conta? <span>Faça login</span></Link>
-        </div>
+        </S.MainSignInLink>
       </S.MainSignInRigntContent>
     </S.MainSignInRignt>
     </S.MainSignIn>
