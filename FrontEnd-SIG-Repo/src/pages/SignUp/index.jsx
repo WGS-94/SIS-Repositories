@@ -60,7 +60,7 @@ export default function SignUp() {
       <S.MainSignInRigntContent>
         <h1>SisRepo</h1>
         <Form onSubmit={handleSubmit} className="card-login">
-          <div className="textField">
+          <div>
             <label htmlFor="name">Nome</label>
             <Input
               type="text" 
@@ -68,7 +68,7 @@ export default function SignUp() {
               id="name"
             />
           </div>
-          <div className="textField">
+          <div>
             <label htmlFor="email">E-mail</label>
             <Input
               type="text" 
@@ -77,7 +77,7 @@ export default function SignUp() {
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             />
           </div>
-          <div className="textField">
+          <div>
             <label htmlFor="password">Senha</label>
             <Input
               type="password" 
@@ -86,7 +86,7 @@ export default function SignUp() {
               minLength="6"
             />
           </div>
-          <button type="submit" className="btn-login">
+          <button type="submit">
             {loading ? <i style={{ fontSize: 32, color: '#2b134b' }} className="fa fa-spinner fa-pulse"/> : 'Cadastrar' }
           </button>
         </Form>
