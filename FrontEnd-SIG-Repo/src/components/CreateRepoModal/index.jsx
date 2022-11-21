@@ -31,7 +31,7 @@ export default function CreateRepositoryModal({ onRequestClose }) {
 
     } catch (error) {
       //console.log("ERRO", error);
-      return toast.error("Não foi possível remover, repositório já existe");
+      return toast.error("Não foi possível cadastrar, este repositório já existe");
     }
   }
 
