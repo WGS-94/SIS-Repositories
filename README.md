@@ -75,13 +75,6 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
   <img src="https://user-images.githubusercontent.com/87288949/202943328-095854c7-3fe0-4eb2-ba0f-2c56f6af6b8b.PNG">
 </div>
 
-### Cadastrar um repositório existente
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202944636-1231f55f-b27f-4f63-ad85-f9842317eb28.PNG">
-</div>
-
-
 ### Excluir repositório
 
 <div align="center">
@@ -98,6 +91,12 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/202943320-4aba2d91-3ce9-43f6-9944-92745ce6d24a.PNG">
+</div>
+
+### Cadastrar um repositório existente
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/87288949/202944636-1231f55f-b27f-4f63-ad85-f9842317eb28.PNG">
 </div>
 
 <!--
