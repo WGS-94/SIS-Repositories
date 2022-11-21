@@ -34,7 +34,7 @@ Desenvolver um sistema de gerenciamento de repositórios do GitHub com login e s
 ## 🖼️ Imagens do Desafio
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/183313746-9ed7e2be-7095-4a7f-a859-04828cb146d6.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/202935078-acda0356-c205-430a-9cc5-3fa54f1c84be.gif">
 </div>
 <!--
 <div align="center">
