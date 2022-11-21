@@ -50,22 +50,15 @@ export default function Home() {
     reload();
   }
 
-  async function handleDeletRepository(repository) {
-
-    const user_id = localStorage.getItem("@SisRepository:userID");
-
-    try {
-
-      await api.delete(`/users/${user_id}/repositories/${repository._id}`);
-      
-      toast.success("Repositório removido com sucesso");
-
-      reload();
-
-      } catch (error) {
-      return toast.error("Não foi possível remover este repositório");
-    }
-  }
+  const searchItem = (items) => {
+    return items.filter(repo => {
+      if (search === '') {
+        return repo;
+      } else if (repo.name.toLowerCase().includes(search.toLowerCase())) {
+        return repo;
+      }
+    })
+  };
 
   return (
     <S.MainHomeContainer>
@@ -111,9 +104,10 @@ export default function Home() {
           </div>
         )}
 
-
-          {/*search.length <= 0 && (
-            <div
+        {data.length > 0 ?
+          <div>
+          {searchItem(data).length === 0 ? 
+            (<div
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -125,37 +119,21 @@ export default function Home() {
               <h3 className="home__search-faild">
                 Sem resultado para pesquisa :(
               </h3>
-            </div>
-                )*/}
-
-        {data.length > 0 ?
-          <div>
-
-          {data.filter(repo => {
-
-            if (search === '') {
-              return repo;
-            } else if (repo.name.toLowerCase().includes(search.toLowerCase())) {
-              return repo;
-            }
-
-          }).map((repository) => (
-            <S.Main key={repository._id}>
-              <div>
-                <p>USUÁRIO: <span>{repository.name.substring(0, repository.name.indexOf('/'))}</span></p>
-                <p>PROJETO: <span>{repository.name.substring(repository.name.indexOf('/')+ 1)}</span></p>
-                <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
-              </div>
-              <DeleteRepositoryModal name={repository.name} id={repository._id} />
-              {/* <button 
-                type="button" 
-                data-testid="remove-repo-button"
-                onClick={() => handleDeletRepository(repository)}
-              >
-                <Trash size={28} />
-              </button> */}
-            </S.Main>
-          ))}
+            </div>) 
+          :
+          <>
+            {searchItem(data).map((repository) => (
+              <S.Main key={repository._id}>
+                <div>
+                  <p>USUÁRIO: <span>{repository.name.substring(0, repository.name.indexOf('/'))}</span></p>
+                  <p>PROJETO: <span>{repository.name.substring(repository.name.indexOf('/')+ 1)}</span></p>
+                  <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
+                </div>
+                <DeleteRepositoryModal name={repository.name} id={repository._id} />
+              </S.Main>
+            ))}
+          </>
+          }
           </div> 
           : (
           <Transition onRequestClose={openModal} />
