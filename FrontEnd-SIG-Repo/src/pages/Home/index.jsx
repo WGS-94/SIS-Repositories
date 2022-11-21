@@ -9,6 +9,7 @@ import Transition from '../../components/Transition'
 import CreateRepoModal from '../../components/CreateRepoModal';
 
 import * as S from './style'; 
+import DeleteRepositoryModal from '../../components/DeleteRepoModal';
 
 export default function Home() {
 
@@ -145,13 +146,14 @@ export default function Home() {
                 <p>PROJETO: <span>{repository.name.substring(repository.name.indexOf('/')+ 1)}</span></p>
                 <p>URL: <Link to="" target="_blank" >{repository.url}</Link></p>
               </div>
-              <button 
+              <DeleteRepositoryModal name={repository.name} id={repository._id} />
+              {/* <button 
                 type="button" 
                 data-testid="remove-repo-button"
                 onClick={() => handleDeletRepository(repository)}
               >
                 <Trash size={28} />
-              </button>
+              </button> */}
             </S.Main>
           ))}
           </div> 
