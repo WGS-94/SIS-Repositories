@@ -4,6 +4,7 @@ import { Trash } from 'phosphor-react';
 import Modal from 'react-modal';
 import { Button, ModalContent } from './style';
 import closeImg from '../../assets/close.svg';
+import api from '../../services/api';
 
 export default function DeleteRepositoryModal({ name, id }) {
 
@@ -29,6 +30,8 @@ export default function DeleteRepositoryModal({ name, id }) {
   }
 
   const user_id = localStorage.getItem("@SisRepository:userID");
+
+  // console.log(name, id, user_id);
 
   // Função para excluir uma setor
   async function DeleteRepository() {
