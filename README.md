@@ -7,7 +7,7 @@
 <h1> SIG-Repositories - Sistema de Gerenciamento de Repositórios 🔥 </h1>
 
 <!-- Subtitle -->
-<h2> Teste de desenvolvimento de sistemas (REACT e NODE) - Junior </h2>
+<h2> Teste de Desenvolvimento de Sistemas (REACT JS & NODE JS) - Junior </h2>
 
 <!-- Badges 
 <p align="center">
